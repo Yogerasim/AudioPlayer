@@ -1,6 +1,5 @@
 import SwiftUI
 
-// MARK: - Shimmer Modifier
 struct ShimmerViewModifier: ViewModifier {
     @State private var phase: CGFloat = 0
 
@@ -34,8 +33,7 @@ extension View {
     }
 
     func shimmer() -> some View {
-        self
-            .redacted(reason: .placeholder)
+        redacted(reason: .placeholder)
             .shimmering()
     }
 }
